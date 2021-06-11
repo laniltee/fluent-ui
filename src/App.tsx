@@ -1,10 +1,13 @@
 import React from 'react';
-import { Stack, Text, Link, FontWeights, IStackTokens } from '@fluentui/react';
+import { Stack, Text, Link, FontWeights, IStackTokens, loadTheme, DefaultButton, PrimaryButton } from '@fluentui/react';
 import logo from './logo.svg';
 import './App.css';
+import myTheme from './styles/theme.js'
 
 const boldStyle = { root: { fontWeight: FontWeights.semibold } };
 const stackTokens: IStackTokens = { childrenGap: 15 };
+
+loadTheme(myTheme);
 
 export const App: React.FunctionComponent = () => {
   return (
@@ -43,6 +46,10 @@ export const App: React.FunctionComponent = () => {
         <Link href="https://developer.microsoft.com/en-us/fluentui#/styles/web/icons">Icons</Link>
         <Link href="https://developer.microsoft.com/en-us/fluentui#/styles/web">Styles</Link>
         <Link href="https://aka.ms/themedesigner">Theme Designer</Link>
+      </Stack>
+      <Stack>
+      <DefaultButton text="Standard"  onClick={() => window.alert("Standard Button")} />
+      <PrimaryButton text="Primary" onClick={() => window.alert("Primary Button")} />
       </Stack>
     </Stack>
   );

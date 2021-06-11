@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    height: 5vh;
+    background-color: #0088d8;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+}
+
+.left-nav {
+    flex: 20%;
+}
+
+.right-content {
+    flex: 80%;
+    padding: 20px;
+}
+
+.footer {
+    text-align: center;
+    height: 5vh;
+}
